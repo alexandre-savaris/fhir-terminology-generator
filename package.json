@@ -1,0 +1,21 @@
+{
+  "name": "fhir-terminology-generator",
+  "version": "1.0.0",
+  "description": "A CLI application to generate FHIR® terminology-related structures.",
+  "main": "fhir-terminology-generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [
+    "FHIR",
+    "Terminology"
+  ],
+  "author": "Alexandre Savaris <alexandre.savaris@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "clear": "^0.1.0",
+    "figlet": "^1.6.0"
+  }
+}
