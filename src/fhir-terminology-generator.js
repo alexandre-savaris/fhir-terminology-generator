@@ -17,49 +17,21 @@ clear();
 // Show the application title.
 ui.showTitle();
 
-// ???
+// Execute the CLI.
 yargs
     .command(codesystem)
     .command(valueset)
+    .option('input-csv-file', {
+        alias: 'i',
+        describe: 'Path to the input CSV file.',
+        type: 'string',
+        demandOption: true
+    })
+    .option('output-json-file', {
+        alias: 'o',
+        describe: 'Path to the output JSON file.',
+        type: 'string',
+        demandOption: true
+    })
     .help()
     .argv;
-
-
-
-
-// ???
-// const args = yargs
-//     .usage("Usage: [command] <options>")
-//     .command('codesystem', 'Generate a CodeSystem', (y) => {
-//         return y
-//             .option("status", {
-//                 describe: "The status of the code system",
-//                 type: "string",
-//                 choices: ['draft', 'active', 'retired', 'unknown'],
-//                 demandOption: true
-//             })
-//             .option("content", {
-//                 describe: "The extent of the content of the code system",
-//                 type: "string",
-//                 choices: ['not-present', 'example', 'fragment', 'complete', 'supplement'],
-//                 demandOption: true
-//             });
-//         }, async (y) => {
-
-//             // Load the CSV as JSON.
-//             const jsonArray = await csv().fromFile('tests/fixtures/cbo-grande-grupo.csv');
-
-//             // Load the Mustache template
-//             const template = await fs.readFile('templates/R5/CodeSystem.mustache', { encoding: 'utf8' });
-
-//             // Render the template.
-//             const filledTemplate = Mustache.render(template, {
-//                 status: y.status,
-//                 content: y.content,
-//                 concept: JSON.stringify(jsonArray, null, 4)
-//             });
-//             console.log(filledTemplate);
-
-//         })
-//         .help()
-//         .argv;
