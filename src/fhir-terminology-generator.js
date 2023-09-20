@@ -21,6 +21,14 @@ ui.showTitle();
 yargs
     .command(codesystem)
     .command(valueset)
+    .option('release', {
+        alias: 'r',
+        describe: 'Release of FHIR to be used.',
+        type: 'string',
+        choices: ['R5'],
+        default: 'R5',
+        demandOption: true
+    })
     .option('input-csv-file', {
         alias: 'i',
         describe: 'Path to the input CSV file.',

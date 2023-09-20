@@ -1,5 +1,10 @@
 {
     "resourceType" : "ValueSet",
     "status" : "{{status}}",
-    "concept" : {{{concept}}}
+    "compose" : {
+        "include" : [{
+            "system" : "{{valuesetComposeIncludeSystem}}",
+            "concept" : {{{concept}}}
+        }]
+    }
 }
