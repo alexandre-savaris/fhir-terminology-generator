@@ -29,6 +29,37 @@ yargs
         default: 'R5',
         demandOption: true
     })
+    .option('url', {
+        alias: 'u',
+        describe: 'Canonical identifier for this terminology.',
+        type: 'string',
+        demandOption: false
+    })
+    .option('vers', {
+        alias: 'v',
+        describe: 'Business version of the terminology.',
+        type: 'string',
+        demandOption: false
+    })
+    .option('name', {
+        alias: 'n',
+        describe: 'Name for this terminology (computer friendly)',
+        type: 'string',
+        demandOption: false
+    })
+    .option('title', {
+        alias: 't',
+        describe: 'Name for this terminology (human friendly)',
+        type: 'string',
+        demandOption: false
+    })
+    .option('experimental', {
+        alias: 'x',
+        describe: 'For testing purposes, not real usage',
+        type: 'string',
+        choices: ['true', 'false'],
+        demandOption: false
+    })
     .option('input-csv-file', {
         alias: 'i',
         describe: 'Path to the input CSV file.',
