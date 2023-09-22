@@ -60,6 +60,24 @@ yargs
         choices: ['true', 'false'],
         demandOption: false
     })
+    .option('date', {
+        alias: 'd',
+        describe: 'Date last changed (in the format YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz)',
+        type: 'string',
+        demandOption: false
+    })
+    .option('publisher', {
+        alias: 'p',
+        describe: 'Name of the publisher/steward (organization or individual)',
+        type: 'string',
+        demandOption: false
+    })
+    .option('description', {
+        alias: 'e',
+        describe: 'Natural language description of the terminology',
+        type: 'string',
+        demandOption: false
+    })
     .option('input-csv-file', {
         alias: 'i',
         describe: 'Path to the input CSV file.',
