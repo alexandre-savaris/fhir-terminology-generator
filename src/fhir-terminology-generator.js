@@ -53,6 +53,13 @@ yargs
         type: 'string',
         demandOption: false
     })
+    .option('status', {
+        alias: 's',
+        describe: 'The status of the terminology',
+        type: 'string',
+        choices: ['draft', 'active', 'retired', 'unknown'],
+        demandOption: true
+    })
     .option('experimental', {
         alias: 'x',
         describe: 'For testing purposes, not real usage',
@@ -75,6 +82,36 @@ yargs
     .option('description', {
         alias: 'e',
         describe: 'Natural language description of the terminology',
+        type: 'string',
+        demandOption: false
+    })
+    .option('purpose', {
+        alias: 'w',
+        describe: 'Why this terminology is defined',
+        type: 'string',
+        demandOption: false
+    })
+    .option('copyright', {
+        alias: 'y',
+        describe: 'Use and/or publishing restrictions',
+        type: 'string',
+        demandOption: false
+    })
+    .option('copyrightLabel', {
+        alias: 'L',
+        describe: 'Copyright holder and year(s)',
+        type: 'string',
+        demandOption: false
+    })
+    .option('approvalDate', {
+        alias: 'D',
+        describe: 'When the terminology was approved by publisher (in the format YYYY, YYYY-MM, or YYYY-MM-DD)',
+        type: 'string',
+        demandOption: false
+    })
+    .option('lastReviewDate', {
+        alias: 'R',
+        describe: 'When the terminology was last reviewed by the publisher (in the format YYYY, YYYY-MM, or YYYY-MM-DD)',
         type: 'string',
         demandOption: false
     })
