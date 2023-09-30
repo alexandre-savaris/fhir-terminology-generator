@@ -26,15 +26,13 @@ yargs
 
 // Configure options unrelated to the structure of CodeSystem or ValueSet resources.
 yargs
-    .option('input-csv-file', {
-        alias: 'i',
-        describe: 'Path to the input CSV file.',
+    .option('input-csv', {
+        describe: 'Path + filename of the input CSV',
         type: 'string',
         demandOption: true
     })
-    .option('output-json-file', {
-        alias: 'o',
-        describe: 'Path to the output JSON file.',
+    .option('output-json', {
+        describe: 'Path + filename for the output JSON',
         type: 'string',
         demandOption: true
     });
