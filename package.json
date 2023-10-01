@@ -1,7 +1,7 @@
 {
   "name": "fhir-terminology-generator",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.0-beta",
   "description": "A CLI application to generate FHIR® terminology-related structures.",
   "main": "fhir-terminology-generator.js",
   "scripts": {
